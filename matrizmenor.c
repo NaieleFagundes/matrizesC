@@ -14,23 +14,22 @@ int main()
              printf ("Digite o elemento para a matriz: ");
              scanf ("%d", &mat[i][j]);
         }
-        if (i == 0 && j == 0){
-            menor = mat [i][j];
-        }
         printf ("\n");
     }
+    
+    menor = mat [0][0];
 
 
     for (i=0; i<2; i++){
         for (j=0; j<2; j++){
              printf ("%d ", mat [i][j]);
-        }
-        if (mat [i][j] < menor){
-            menorLinha = mat [i][j];
+             if (mat [i][j] < menor){
+                menorLinha = i;
+            }
         }
         printf ("\n");
     }
     
-    printf ("O menor número está na linha %d", menorLinha);
+    printf ("O menor número está na linha %d", menorLinha+1);
     return 0;
 }
